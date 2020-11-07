@@ -17,8 +17,11 @@ Open Browser To LOGIN Page
     [Arguments]   ${endereco}  
     Open Browser  ${endereco}  ${BROWSER}
     Maximize Browser Window  
-    Wait Until Page Contains Element  //a [@data-reactid=".0.2.0.0.0.0.2.0.0"]
-    click Link   //a [@data-reactid=".0.2.0.0.0.0.2.0.0"]
-
-
-
+    Wait Until Page Contains Element  //a[@data-reactid=".0.2.0.0.0.0.2.0.2"]
+    click Link   //a[@data-reactid=".0.2.0.0.0.0.2.0.2"]
+Login In Clash
+    [Arguments]      ${usuario}      ${senha}
+    Wait Until Page Contains Element  //input[@id="email"]
+    Input Text  //input[@id="email"]  ${usuario}
+    Input Password  //input[@id="password"]  ${senha}
+    Click Button  //button[@type="submit"]
