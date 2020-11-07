@@ -7,6 +7,7 @@ name = "pypi"
 robotframework = "*"
 robotframework-seleniumlibrary = "*"
 rpaframework = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
