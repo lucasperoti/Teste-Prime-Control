@@ -8,6 +8,7 @@ robotframework = "*"
 robotframework-seleniumlibrary = "*"
 rpaframework = "*"
 python-dotenv = "*"
+requests = "*"
 
 [dev-packages]
 

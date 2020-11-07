@@ -2,11 +2,11 @@
 Library     SeleniumLibrary
 
 
+
 *** Variables ***
 ${BROWSER}      Chrome
 ${ip}       201.13.103.203    
 ${Key}  
-
 
 *** Test Cases ***
 Generate API KEY
@@ -16,6 +16,7 @@ Generate API KEY
     Navegate To Generate Key Page
     Generate Key    ${nomeKey}      ${descricao}   
     Get API KEY
+
 
 *** Keywords ***
 Open Browser To LOGIN Page 
@@ -43,16 +44,15 @@ Generate Key
     Wait Until Page Contains Element  //span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]
     Click Element  //span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]
     Wait Until Page Contains Element  //textarea[@id="description"]
-    Input Text  //input[@id="name"]  ${nomeKey}
-    Input Text  //textarea[@id="description"]  ${descricao}
-    Input Text  //input[@id="range-0"]  ${ip}
-    Click Button  //button[@type="submit"]
+    Input Text     //input[@id="name"]  ${nomeKey}
+    Input Text     //textarea[@id="description"]  ${descricao}
+    Input Text     //input[@id="range-0"]  ${ip}
+    Click Button   //button[@type="submit"]
     
 Get API KEY
     [Documentation]     Obter a api key gerada.
     Wait Until Page Contains Element  //span[@class="dev-site-icon-key dev-site-icon"][1]
-    Click Element  //span[@class="dev-site-icon-key dev-site-icon"][1]  
-    Wait Until Page Contains Element     //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]  
-    ${Key}  Get Text  //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"] 
-
+    Click Element       //span[@class="dev-site-icon-key dev-site-icon"][1]  
+    Wait Until Page Contains Element  //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]  
+    ${Key}  Get Text    //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"] 
 
