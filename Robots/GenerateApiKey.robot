@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 Library     ../Libraries/ApiConsumer.py
 Library     ../Libraries/Logger.py
-                
+Suite Teardown   Teardown               
 
 *** Variables ***
 ${BROWSER}      Chrome
@@ -19,7 +19,6 @@ Generate CSV
     Generate Key    ${nomeKey}      ${descricao}   
     Get API KEY
     Generate CSV FILE  ${Key}
-    Terminate
 
 *** Keywords ***
 Open Browser To LOGIN Page 
@@ -30,29 +29,24 @@ Open Browser To LOGIN Page
     Maximize Browser Window  
     ${Status}   Run Keyword And Return Status   Wait Until Page Contains Element  //a[@data-reactid=".0.2.0.0.0.0.2.0.2"]
     Run Keyword If  ${Status} is False  Logger  ERROR    Pagina inicial nao encontrada.
-    Run Keyword If  ${Status} is False  Close Browser
     click Link    //a[@data-reactid=".0.2.0.0.0.0.2.0.2"]
-    Logger        INFO  pagina de login
     
 Login In Clash
     [Documentation]     Executa o Login na pagina de login.
     [Arguments]     ${usuario}      ${senha}
     ${Status}   Run Keyword And Return Status   Wait Until Page Contains Element  //input[@id="email"]
     Run Keyword If  ${Status} is False  Logger  ERROR    Pagina de login nao encontrada.
-    Run Keyword If  ${Status} is False  Terminate
     Logger        INFO        Digitando usuario e senha
     Input Text      //input[@id="email"]     ${usuario}
     Input Password  //input[@id="password"]  ${senha}
     Click Button    //button[@type="submit"]
     ${Status}   Run Keyword And Return Status  Wait Until Page Contains Element   //span[@data-reactid=".0.2.0.1.0.0.0.0.1.0.0.2"]  
     Run Keyword If  ${Status} is True  Logger  ERROR     Login ou senha incorretos.
-    Run Keyword If  ${Status} is True  Terminate
     
 Navegate To Generate Key Page  
     [Documentation]     Navega ate a pagina de geraçao da API Key.
     ${Status}   Run Keyword And Return Status   Wait Until Page Contains Element  //button[@data-toggle="dropdown"]
     Run Keyword If  ${Status} is False  Logger  ERROR   Menu inicial nao encontrado. 
-    Run Keyword If  ${Status} is False  Terminate
     Click Element   //button[@data-toggle="dropdown"]  
     Logger  INFO    Selecionando item My account no dropdown menu
     Click Element   //a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]
@@ -62,7 +56,6 @@ Generate Key
     [Arguments]     ${nomeKey}      ${descricao}
     ${Status}   Run Keyword And Return Status   Wait Until Page Contains Element  //span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]
     Run Keyword If  ${Status} is False  Logger  ERROR   Pagina de geraçao de API KEY nao encontrada.
-    Run Keyword If  ${Status} is False  Terminate
     Logger  INFO    Gerando a API KEY
     Click Element  //span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]
     Wait Until Page Contains Element  //textarea[@id="description"]
@@ -78,11 +71,9 @@ Get API KEY
     [Documentation]     Obter a API KEY gerada.
     ${Status}   Run Keyword And Return Status   Wait Until Page Contains Element  //span[@class="dev-site-icon-key dev-site-icon"][1]
     Run Keyword If  ${Status} is False  Logger  ERROR   Pagina com a chave gerada nao encontrada.
-    Run Keyword If  ${Status} is False  Terminate
     Click Element       //span[@class="dev-site-icon-key dev-site-icon"][1]  
     ${Status}   Run Keyword And Return Status  Wait Until Page Contains Element  //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]  
     Run Keyword If  ${Status} is False  Logger  ERROR   Token nao encontrado.
-    Run Keyword If  ${Status} is False  Terminate
     Logger  INFO    Token encontrado com sucesso
     ${Key}  Get Text    //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"] 
     Set Global Variable     ${Key}  
@@ -93,7 +84,7 @@ Generate CSV FILE
     Logger  INFO    Gerando o arquivo CSV
     Generate CSV        ${Key}
 
-Terminate
+Teardown
     Logger  INFO    Fechando BROWSER
     Close Browser       
 

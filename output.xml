@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201108 16:39:05.268" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201108 17:09:12.519" rpa="false">
 <suite id="s1" name="GenerateApiKey" source="C:\Users\Pichau\Desktop\Docs Lucas\python\Teste Prime Control\Teste-Prime-Control\Robots\GenerateApiKey.robot">
 <test id="s1-t1" name="Generate CSV">
 <kw name="Open Browser To LOGIN Page">
@@ -12,9 +12,9 @@
 <arg>INFO</arg>
 <arg>Abrindo Browser e navengando ate a tela de login.</arg>
 </arguments>
-<msg timestamp="20201108 16:39:05.487" level="INFO">Abrindo Browser e navengando ate a tela de login.</msg>
-<msg timestamp="20201108 16:39:05.487" level="INFO">2020-11-08 16:39:05,487 INFO: Abrindo Browser e navengando ate a tela de login.</msg>
-<status status="PASS" starttime="20201108 16:39:05.486" endtime="20201108 16:39:05.495"></status>
+<msg timestamp="20201108 17:09:12.723" level="INFO">Abrindo Browser e navengando ate a tela de login.</msg>
+<msg timestamp="20201108 17:09:12.723" level="INFO">2020-11-08 17:09:12,722 INFO: Abrindo Browser e navengando ate a tela de login.</msg>
+<status status="PASS" starttime="20201108 17:09:12.722" endtime="20201108 17:09:12.731"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -22,12 +22,12 @@
 <arg>${endereco}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:05.495" level="INFO">Opening browser 'Chrome' to base url 'https://developer.clashroyale.com/#/'.</msg>
-<status status="PASS" starttime="20201108 16:39:05.495" endtime="20201108 16:39:11.275"></status>
+<msg timestamp="20201108 17:09:12.732" level="INFO">Opening browser 'Chrome' to base url 'https://developer.clashroyale.com/#/'.</msg>
+<status status="PASS" starttime="20201108 17:09:12.731" endtime="20201108 17:09:18.828"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201108 16:39:11.275" endtime="20201108 16:39:13.391"></status>
+<status status="PASS" starttime="20201108 17:09:18.828" endtime="20201108 17:09:20.944"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -43,10 +43,10 @@
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:13.391" endtime="20201108 16:39:13.401"></status>
+<status status="PASS" starttime="20201108 17:09:20.944" endtime="20201108 17:09:20.953"></status>
 </kw>
-<msg timestamp="20201108 16:39:13.401" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:13.391" endtime="20201108 16:39:13.401"></status>
+<msg timestamp="20201108 17:09:20.953" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:20.944" endtime="20201108 17:09:20.953"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -56,34 +56,17 @@
 <arg>ERROR</arg>
 <arg>Pagina inicial nao encontrada.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:13.401" endtime="20201108 16:39:13.402"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Close Browser</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:13.402" endtime="20201108 16:39:13.402"></status>
+<status status="PASS" starttime="20201108 17:09:20.953" endtime="20201108 17:09:20.953"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:13.402" level="INFO">Clicking link '//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:13.402" endtime="20201108 16:39:13.454"></status>
+<msg timestamp="20201108 17:09:20.954" level="INFO">Clicking link '//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:20.954" endtime="20201108 17:09:21.004"></status>
 </kw>
-<kw name="Logger" library="Logger">
-<arguments>
-<arg>INFO</arg>
-<arg>pagina de login</arg>
-</arguments>
-<msg timestamp="20201108 16:39:13.455" level="INFO">pagina de login</msg>
-<msg timestamp="20201108 16:39:13.456" level="INFO">2020-11-08 16:39:13,455 INFO: pagina de login</msg>
-<status status="PASS" starttime="20201108 16:39:13.454" endtime="20201108 16:39:13.456"></status>
-</kw>
-<status status="PASS" starttime="20201108 16:39:05.486" endtime="20201108 16:39:13.456"></status>
+<status status="PASS" starttime="20201108 17:09:12.722" endtime="20201108 17:09:21.004"></status>
 </kw>
 <kw name="Login In Clash">
 <doc>Executa o Login na pagina de login.</doc>
@@ -105,10 +88,10 @@
 <arguments>
 <arg>//input[@id="email"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:13.457" endtime="20201108 16:39:13.468"></status>
+<status status="PASS" starttime="20201108 17:09:21.005" endtime="20201108 17:09:21.015"></status>
 </kw>
-<msg timestamp="20201108 16:39:13.468" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:13.457" endtime="20201108 16:39:13.468"></status>
+<msg timestamp="20201108 17:09:21.015" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:21.005" endtime="20201108 17:09:21.015"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -118,24 +101,16 @@
 <arg>ERROR</arg>
 <arg>Pagina de login nao encontrada.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:13.468" endtime="20201108 16:39:13.469"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:13.469" endtime="20201108 16:39:13.469"></status>
+<status status="PASS" starttime="20201108 17:09:21.015" endtime="20201108 17:09:21.016"></status>
 </kw>
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>Digitando usuario e senha</arg>
 </arguments>
-<msg timestamp="20201108 16:39:13.470" level="INFO">Digitando usuario e senha</msg>
-<msg timestamp="20201108 16:39:13.470" level="INFO">2020-11-08 16:39:13,469 INFO: Digitando usuario e senha</msg>
-<status status="PASS" starttime="20201108 16:39:13.469" endtime="20201108 16:39:13.476"></status>
+<msg timestamp="20201108 17:09:21.016" level="INFO">Digitando usuario e senha</msg>
+<msg timestamp="20201108 17:09:21.016" level="INFO">2020-11-08 17:09:21,015 INFO: Digitando usuario e senha</msg>
+<status status="PASS" starttime="20201108 17:09:21.016" endtime="20201108 17:09:21.017"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -143,8 +118,8 @@
 <arg>//input[@id="email"]</arg>
 <arg>${usuario}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:13.476" level="INFO">Typing text 'lucasperoti@gmail.com' into text field '//input[@id="email"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:13.476" endtime="20201108 16:39:13.577"></status>
+<msg timestamp="20201108 17:09:21.017" level="INFO">Typing text 'lucasperoti@gmail.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:21.017" endtime="20201108 17:09:21.119"></status>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -152,18 +127,18 @@
 <arg>//input[@id="password"]</arg>
 <arg>${senha}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:13.577" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
-<msg timestamp="20201108 16:39:13.610" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201108 16:39:13.657" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201108 16:39:13.577" endtime="20201108 16:39:13.657"></status>
+<msg timestamp="20201108 17:09:21.119" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<msg timestamp="20201108 17:09:21.154" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201108 17:09:21.200" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201108 17:09:21.119" endtime="20201108 17:09:21.201"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@type="submit"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:13.657" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:13.657" endtime="20201108 16:39:13.711"></status>
+<msg timestamp="20201108 17:09:21.201" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:21.201" endtime="20201108 17:09:21.258"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -181,14 +156,14 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20201108 16:39:19.787" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20201108 16:39:18.845" endtime="20201108 16:39:19.787"></status>
+<msg timestamp="20201108 17:09:27.308" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201108 17:09:26.377" endtime="20201108 17:09:27.308"></status>
 </kw>
-<msg timestamp="20201108 16:39:19.788" level="FAIL">Element '//span[@data-reactid=".0.2.0.1.0.0.0.0.1.0.0.2"]' did not appear in 5 seconds.</msg>
-<status status="FAIL" starttime="20201108 16:39:13.711" endtime="20201108 16:39:19.788"></status>
+<msg timestamp="20201108 17:09:27.310" level="FAIL">Element '//span[@data-reactid=".0.2.0.1.0.0.0.0.1.0.0.2"]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20201108 17:09:21.258" endtime="20201108 17:09:27.310"></status>
 </kw>
-<msg timestamp="20201108 16:39:19.788" level="INFO">${Status} = False</msg>
-<status status="PASS" starttime="20201108 16:39:13.711" endtime="20201108 16:39:19.789"></status>
+<msg timestamp="20201108 17:09:27.310" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20201108 17:09:21.258" endtime="20201108 17:09:27.310"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -198,17 +173,9 @@
 <arg>ERROR</arg>
 <arg>Login ou senha incorretos.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.789" endtime="20201108 16:39:19.789"></status>
+<status status="PASS" starttime="20201108 17:09:27.310" endtime="20201108 17:09:27.310"></status>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is True</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:19.789" endtime="20201108 16:39:19.789"></status>
-</kw>
-<status status="PASS" starttime="20201108 16:39:13.457" endtime="20201108 16:39:19.789"></status>
+<status status="PASS" starttime="20201108 17:09:21.004" endtime="20201108 17:09:27.311"></status>
 </kw>
 <kw name="Navegate To Generate Key Page">
 <doc>Navega ate a pagina de geraçao da API Key.</doc>
@@ -226,10 +193,10 @@
 <arguments>
 <arg>//button[@data-toggle="dropdown"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.790" endtime="20201108 16:39:19.799"></status>
+<status status="PASS" starttime="20201108 17:09:27.311" endtime="20201108 17:09:27.321"></status>
 </kw>
-<msg timestamp="20201108 16:39:19.799" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:19.790" endtime="20201108 16:39:19.799"></status>
+<msg timestamp="20201108 17:09:27.321" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:27.311" endtime="20201108 17:09:27.321"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -239,42 +206,34 @@
 <arg>ERROR</arg>
 <arg>Menu inicial nao encontrado.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.800" endtime="20201108 16:39:19.800"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:19.800" endtime="20201108 16:39:19.800"></status>
+<status status="PASS" starttime="20201108 17:09:27.321" endtime="20201108 17:09:27.322"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@data-toggle="dropdown"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:19.800" level="INFO">Clicking element '//button[@data-toggle="dropdown"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:19.800" endtime="20201108 16:39:19.841"></status>
+<msg timestamp="20201108 17:09:27.322" level="INFO">Clicking element '//button[@data-toggle="dropdown"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.322" endtime="20201108 17:09:27.355"></status>
 </kw>
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>Selecionando item My account no dropdown menu</arg>
 </arguments>
-<msg timestamp="20201108 16:39:19.843" level="INFO">Selecionando item My account no dropdown menu</msg>
-<msg timestamp="20201108 16:39:19.843" level="INFO">2020-11-08 16:39:19,841 INFO: Selecionando item My account no dropdown menu</msg>
-<status status="PASS" starttime="20201108 16:39:19.841" endtime="20201108 16:39:19.843"></status>
+<msg timestamp="20201108 17:09:27.356" level="INFO">Selecionando item My account no dropdown menu</msg>
+<msg timestamp="20201108 17:09:27.356" level="INFO">2020-11-08 17:09:27,356 INFO: Selecionando item My account no dropdown menu</msg>
+<status status="PASS" starttime="20201108 17:09:27.355" endtime="20201108 17:09:27.356"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:19.844" level="INFO">Clicking element '//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:19.843" endtime="20201108 16:39:19.926"></status>
+<msg timestamp="20201108 17:09:27.357" level="INFO">Clicking element '//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.356" endtime="20201108 17:09:27.410"></status>
 </kw>
-<status status="PASS" starttime="20201108 16:39:19.790" endtime="20201108 16:39:19.926"></status>
+<status status="PASS" starttime="20201108 17:09:27.311" endtime="20201108 17:09:27.410"></status>
 </kw>
 <kw name="Generate Key">
 <doc>Gera a API KEY.</doc>
@@ -296,10 +255,10 @@
 <arguments>
 <arg>//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.927" endtime="20201108 16:39:19.937"></status>
+<status status="PASS" starttime="20201108 17:09:27.411" endtime="20201108 17:09:27.422"></status>
 </kw>
-<msg timestamp="20201108 16:39:19.937" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:19.927" endtime="20201108 16:39:19.937"></status>
+<msg timestamp="20201108 17:09:27.422" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:27.411" endtime="20201108 17:09:27.422"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -309,39 +268,31 @@
 <arg>ERROR</arg>
 <arg>Pagina de geraçao de API KEY nao encontrada.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.938" endtime="20201108 16:39:19.938"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:19.938" endtime="20201108 16:39:19.938"></status>
+<status status="PASS" starttime="20201108 17:09:27.422" endtime="20201108 17:09:27.423"></status>
 </kw>
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>Gerando a API KEY</arg>
 </arguments>
-<msg timestamp="20201108 16:39:19.939" level="INFO">Gerando a API KEY</msg>
-<msg timestamp="20201108 16:39:19.939" level="INFO">2020-11-08 16:39:19,938 INFO: Gerando a API KEY</msg>
-<status status="PASS" starttime="20201108 16:39:19.938" endtime="20201108 16:39:19.940"></status>
+<msg timestamp="20201108 17:09:27.424" level="INFO">Gerando a API KEY</msg>
+<msg timestamp="20201108 17:09:27.424" level="INFO">2020-11-08 17:09:27,423 INFO: Gerando a API KEY</msg>
+<status status="PASS" starttime="20201108 17:09:27.423" endtime="20201108 17:09:27.424"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:19.940" level="INFO">Clicking element '//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:19.940" endtime="20201108 16:39:19.996"></status>
+<msg timestamp="20201108 17:09:27.424" level="INFO">Clicking element '//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.424" endtime="20201108 17:09:27.477"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//textarea[@id="description"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:19.996" endtime="20201108 16:39:20.006"></status>
+<status status="PASS" starttime="20201108 17:09:27.477" endtime="20201108 17:09:27.486"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -349,8 +300,8 @@
 <arg>//input[@id="name"]</arg>
 <arg>${nomeKey}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:20.006" level="INFO">Typing text 'testePrime' into text field '//input[@id="name"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:20.006" endtime="20201108 16:39:20.105"></status>
+<msg timestamp="20201108 17:09:27.486" level="INFO">Typing text 'testePrime' into text field '//input[@id="name"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.486" endtime="20201108 17:09:27.570"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -358,15 +309,15 @@
 <arg>//textarea[@id="description"]</arg>
 <arg>${descricao}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:20.106" level="INFO">Typing text 'description' into text field '//textarea[@id="description"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:20.105" endtime="20201108 16:39:20.186"></status>
+<msg timestamp="20201108 17:09:27.571" level="INFO">Typing text 'description' into text field '//textarea[@id="description"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.571" endtime="20201108 17:09:27.644"></status>
 </kw>
 <kw name="Get Ip" library="ApiConsumer">
 <assign>
 <var>${ip}</var>
 </assign>
-<msg timestamp="20201108 16:39:20.253" level="INFO">${ip} = 201.93.197.69</msg>
-<status status="PASS" starttime="20201108 16:39:20.186" endtime="20201108 16:39:20.253"></status>
+<msg timestamp="20201108 17:09:27.711" level="INFO">${ip} = 201.93.197.69</msg>
+<status status="PASS" starttime="20201108 17:09:27.644" endtime="20201108 17:09:27.712"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -374,27 +325,27 @@
 <arg>//input[@id="range-0"]</arg>
 <arg>${ip}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:20.253" level="INFO">Typing text '201.93.197.69' into text field '//input[@id="range-0"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:20.253" endtime="20201108 16:39:20.333"></status>
+<msg timestamp="20201108 17:09:27.712" level="INFO">Typing text '201.93.197.69' into text field '//input[@id="range-0"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.712" endtime="20201108 17:09:27.794"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@type="submit"]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:20.333" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20201108 16:39:20.333" endtime="20201108 16:39:20.384"></status>
+<msg timestamp="20201108 17:09:27.794" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20201108 17:09:27.794" endtime="20201108 17:09:27.838"></status>
 </kw>
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>API KEY gerada com sucesso</arg>
 </arguments>
-<msg timestamp="20201108 16:39:20.385" level="INFO">API KEY gerada com sucesso</msg>
-<msg timestamp="20201108 16:39:20.385" level="INFO">2020-11-08 16:39:20,384 INFO: API KEY gerada com sucesso</msg>
-<status status="PASS" starttime="20201108 16:39:20.384" endtime="20201108 16:39:20.386"></status>
+<msg timestamp="20201108 17:09:27.840" level="INFO">API KEY gerada com sucesso</msg>
+<msg timestamp="20201108 17:09:27.840" level="INFO">2020-11-08 17:09:27,839 INFO: API KEY gerada com sucesso</msg>
+<status status="PASS" starttime="20201108 17:09:27.839" endtime="20201108 17:09:27.840"></status>
 </kw>
-<status status="PASS" starttime="20201108 16:39:19.926" endtime="20201108 16:39:20.386"></status>
+<status status="PASS" starttime="20201108 17:09:27.411" endtime="20201108 17:09:27.840"></status>
 </kw>
 <kw name="Get API KEY">
 <doc>Obter a API KEY gerada.</doc>
@@ -412,10 +363,10 @@
 <arguments>
 <arg>//span[@class="dev-site-icon-key dev-site-icon"][1]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:20.386" endtime="20201108 16:39:21.432"></status>
+<status status="PASS" starttime="20201108 17:09:27.841" endtime="20201108 17:09:28.467"></status>
 </kw>
-<msg timestamp="20201108 16:39:21.432" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:20.386" endtime="20201108 16:39:21.432"></status>
+<msg timestamp="20201108 17:09:28.467" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:27.841" endtime="20201108 17:09:28.467"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -425,23 +376,15 @@
 <arg>ERROR</arg>
 <arg>Pagina com a chave gerada nao encontrada.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:21.432" endtime="20201108 16:39:21.433"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:21.433" endtime="20201108 16:39:21.433"></status>
+<status status="PASS" starttime="20201108 17:09:28.467" endtime="20201108 17:09:28.468"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//span[@class="dev-site-icon-key dev-site-icon"][1]</arg>
 </arguments>
-<msg timestamp="20201108 16:39:21.433" level="INFO">Clicking element '//span[@class="dev-site-icon-key dev-site-icon"][1]'.</msg>
-<status status="PASS" starttime="20201108 16:39:21.433" endtime="20201108 16:39:21.486"></status>
+<msg timestamp="20201108 17:09:28.468" level="INFO">Clicking element '//span[@class="dev-site-icon-key dev-site-icon"][1]'.</msg>
+<status status="PASS" starttime="20201108 17:09:28.468" endtime="20201108 17:09:28.525"></status>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
@@ -457,10 +400,10 @@
 <arguments>
 <arg>//samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:21.486" endtime="20201108 16:39:21.495"></status>
+<status status="PASS" starttime="20201108 17:09:28.525" endtime="20201108 17:09:28.534"></status>
 </kw>
-<msg timestamp="20201108 16:39:21.495" level="INFO">${Status} = True</msg>
-<status status="PASS" starttime="20201108 16:39:21.486" endtime="20201108 16:39:21.495"></status>
+<msg timestamp="20201108 17:09:28.534" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 17:09:28.525" endtime="20201108 17:09:28.534"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -470,24 +413,16 @@
 <arg>ERROR</arg>
 <arg>Token nao encontrado.</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:21.495" endtime="20201108 16:39:21.496"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${Status} is False</arg>
-<arg>Terminate</arg>
-</arguments>
-<status status="PASS" starttime="20201108 16:39:21.496" endtime="20201108 16:39:21.496"></status>
+<status status="PASS" starttime="20201108 17:09:28.535" endtime="20201108 17:09:28.535"></status>
 </kw>
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>Token encontrado com sucesso</arg>
 </arguments>
-<msg timestamp="20201108 16:39:21.497" level="INFO">Token encontrado com sucesso</msg>
-<msg timestamp="20201108 16:39:21.497" level="INFO">2020-11-08 16:39:21,496 INFO: Token encontrado com sucesso</msg>
-<status status="PASS" starttime="20201108 16:39:21.496" endtime="20201108 16:39:21.497"></status>
+<msg timestamp="20201108 17:09:28.536" level="INFO">Token encontrado com sucesso</msg>
+<msg timestamp="20201108 17:09:28.536" level="INFO">2020-11-08 17:09:28,536 INFO: Token encontrado com sucesso</msg>
+<status status="PASS" starttime="20201108 17:09:28.535" endtime="20201108 17:09:28.537"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -497,18 +432,18 @@
 <assign>
 <var>${Key}</var>
 </assign>
-<msg timestamp="20201108 16:39:21.512" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQzNzQ1Y2Q4LWY2YTMtNDhjOC05YTdmLTc...</msg>
-<status status="PASS" starttime="20201108 16:39:21.497" endtime="20201108 16:39:21.512"></status>
+<msg timestamp="20201108 17:09:28.552" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQxZjU5ZTZhLWU0ZGMtNGQ4Mi1iZWRiLWF...</msg>
+<status status="PASS" starttime="20201108 17:09:28.537" endtime="20201108 17:09:28.552"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${Key}</arg>
 </arguments>
-<msg timestamp="20201108 16:39:21.513" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQzNzQ1Y2Q4LWY2YTMtNDhjOC05YTdmLTc...</msg>
-<status status="PASS" starttime="20201108 16:39:21.513" endtime="20201108 16:39:21.513"></status>
+<msg timestamp="20201108 17:09:28.553" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjQxZjU5ZTZhLWU0ZGMtNGQ4Mi1iZWRiLWF...</msg>
+<status status="PASS" starttime="20201108 17:09:28.553" endtime="20201108 17:09:28.553"></status>
 </kw>
-<status status="PASS" starttime="20201108 16:39:20.386" endtime="20201108 16:39:21.513"></status>
+<status status="PASS" starttime="20201108 17:09:27.840" endtime="20201108 17:09:28.553"></status>
 </kw>
 <kw name="Generate CSV FILE">
 <doc>Escreve no Arquivo csv o resultado da lista obtida atraves da api.</doc>
@@ -520,38 +455,38 @@
 <arg>INFO</arg>
 <arg>Gerando o arquivo CSV</arg>
 </arguments>
-<msg timestamp="20201108 16:39:21.515" level="INFO">Gerando o arquivo CSV</msg>
-<msg timestamp="20201108 16:39:21.515" level="INFO">2020-11-08 16:39:21,513 INFO: Gerando o arquivo CSV</msg>
-<status status="PASS" starttime="20201108 16:39:21.514" endtime="20201108 16:39:21.515"></status>
+<msg timestamp="20201108 17:09:28.554" level="INFO">Gerando o arquivo CSV</msg>
+<msg timestamp="20201108 17:09:28.554" level="INFO">2020-11-08 17:09:28,554 INFO: Gerando o arquivo CSV</msg>
+<status status="PASS" starttime="20201108 17:09:28.553" endtime="20201108 17:09:28.555"></status>
 </kw>
 <kw name="Generate Csv" library="ApiConsumer">
 <arguments>
 <arg>${Key}</arg>
 </arguments>
-<status status="PASS" starttime="20201108 16:39:21.515" endtime="20201108 16:39:25.957"></status>
+<status status="PASS" starttime="20201108 17:09:28.555" endtime="20201108 17:09:32.686"></status>
 </kw>
-<status status="PASS" starttime="20201108 16:39:21.513" endtime="20201108 16:39:25.957"></status>
+<status status="PASS" starttime="20201108 17:09:28.553" endtime="20201108 17:09:32.686"></status>
 </kw>
-<kw name="Terminate">
+<doc>Faz o login no site de api do clash of clans, cria um token e o utiliza para gerar um arquivo csv com o resultado de uma chamada de api,retornando os membros do clan.</doc>
+<status status="PASS" starttime="20201108 17:09:12.721" endtime="20201108 17:09:32.687" critical="yes"></status>
+</test>
+<kw name="Teardown" type="teardown">
 <kw name="Logger" library="Logger">
 <arguments>
 <arg>INFO</arg>
 <arg>Fechando BROWSER</arg>
 </arguments>
-<msg timestamp="20201108 16:39:25.959" level="INFO">Fechando BROWSER</msg>
-<msg timestamp="20201108 16:39:25.959" level="INFO">2020-11-08 16:39:25,958 INFO: Fechando BROWSER</msg>
-<status status="PASS" starttime="20201108 16:39:25.958" endtime="20201108 16:39:25.961"></status>
+<msg timestamp="20201108 17:09:32.689" level="INFO">Fechando BROWSER</msg>
+<msg timestamp="20201108 17:09:32.690" level="INFO">2020-11-08 17:09:32,689 INFO: Fechando BROWSER</msg>
+<status status="PASS" starttime="20201108 17:09:32.688" endtime="20201108 17:09:32.698"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20201108 16:39:25.962" endtime="20201108 16:39:28.087"></status>
+<status status="PASS" starttime="20201108 17:09:32.698" endtime="20201108 17:09:34.830"></status>
 </kw>
-<status status="PASS" starttime="20201108 16:39:25.957" endtime="20201108 16:39:28.087"></status>
+<status status="PASS" starttime="20201108 17:09:32.688" endtime="20201108 17:09:34.830"></status>
 </kw>
-<doc>Faz o login no site de api do clash of clans, cria um token e o utiliza para gerar um arquivo csv com o resultado de uma chamada de api,retornando os membros do clan.</doc>
-<status status="PASS" starttime="20201108 16:39:05.485" endtime="20201108 16:39:28.088" critical="yes"></status>
-</test>
-<status status="PASS" starttime="20201108 16:39:05.277" endtime="20201108 16:39:28.088"></status>
+<status status="PASS" starttime="20201108 17:09:12.529" endtime="20201108 17:09:34.830"></status>
 </suite>
 <statistics>
 <total>
