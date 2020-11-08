@@ -1,54 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201108 00:11:41.519" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201108 03:33:15.693" rpa="false">
 <suite id="s1" name="GenerateApiKey" source="C:\Users\Pichau\Desktop\Docs Lucas\python\Teste Prime Control\Teste-Prime-Control\Robots\GenerateApiKey.robot">
-<test id="s1-t1" name="Generate API KEY">
+<test id="s1-t1" name="Generate CSV">
 <kw name="Open Browser To LOGIN Page">
 <doc>Acessa a pagina de login.</doc>
 <arguments>
 <arg>${endereco}</arg>
 </arguments>
+<kw name="Logger" library="Logger">
+<arguments>
+<arg>INFO</arg>
+<arg>Abrindo Browser e navengando ate a tela de login.</arg>
+</arguments>
+<msg timestamp="20201108 03:33:15.909" level="INFO">Abrindo Browser e navengando ate a tela de login.</msg>
+<msg timestamp="20201108 03:33:15.909" level="INFO">2020-11-08 03:33:15,907 INFO: Abrindo Browser e navengando ate a tela de login.</msg>
+<status status="PASS" starttime="20201108 03:33:15.907" endtime="20201108 03:33:15.915"></status>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${endereco}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:41.736" level="INFO">Opening browser 'Chrome' to base url 'https://developer.clashroyale.com/#/'.</msg>
-<status status="PASS" starttime="20201108 00:11:41.735" endtime="20201108 00:11:49.458"></status>
+<msg timestamp="20201108 03:33:15.915" level="INFO">Opening browser 'Chrome' to base url 'https://developer.clashroyale.com/#/'.</msg>
+<status status="PASS" starttime="20201108 03:33:15.915" endtime="20201108 03:33:22.010"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20201108 00:11:49.458" endtime="20201108 00:11:51.574"></status>
+<status status="PASS" starttime="20201108 03:33:22.010" endtime="20201108 03:33:24.133"></status>
 </kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:51.574" endtime="20201108 00:11:51.586"></status>
+<status status="PASS" starttime="20201108 03:33:24.134" endtime="20201108 03:33:24.144"></status>
+</kw>
+<msg timestamp="20201108 03:33:24.144" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 03:33:24.134" endtime="20201108 03:33:24.144"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Status} is False</arg>
+<arg>Logger</arg>
+<arg>ERROR</arg>
+<arg>Pagina nao encontrada.</arg>
+</arguments>
+<status status="PASS" starttime="20201108 03:33:24.144" endtime="20201108 03:33:24.144"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:51.586" level="INFO">Clicking link '//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:51.586" endtime="20201108 00:11:51.640"></status>
+<msg timestamp="20201108 03:33:24.144" level="INFO">Clicking link '//a[@data-reactid=".0.2.0.0.0.0.2.0.2"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:24.144" endtime="20201108 03:33:24.194"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:41.735" endtime="20201108 00:11:51.640"></status>
+<kw name="Logger" library="Logger">
+<arguments>
+<arg>INFO</arg>
+<arg>Abrindo pagina de Login</arg>
+</arguments>
+<msg timestamp="20201108 03:33:24.195" level="INFO">Abrindo pagina de Login</msg>
+<msg timestamp="20201108 03:33:24.195" level="INFO">2020-11-08 03:33:24,194 INFO: Abrindo pagina de Login</msg>
+<status status="PASS" starttime="20201108 03:33:24.194" endtime="20201108 03:33:24.196"></status>
+</kw>
+<status status="PASS" starttime="20201108 03:33:15.907" endtime="20201108 03:33:24.196"></status>
 </kw>
 <kw name="Login In Clash">
-<doc>Executa o Login, na pagina de login.</doc>
+<doc>Executa o Login na pagina de login.</doc>
 <arguments>
 <arg>${usuario}</arg>
 <arg>${senha}</arg>
 </arguments>
+<kw name="Logger" library="Logger">
+<arguments>
+<arg>INFO</arg>
+<arg>Realizando login</arg>
+</arguments>
+<msg timestamp="20201108 03:33:24.197" level="INFO">Realizando login</msg>
+<msg timestamp="20201108 03:33:24.197" level="INFO">2020-11-08 03:33:24,196 INFO: Realizando login</msg>
+<status status="PASS" starttime="20201108 03:33:24.196" endtime="20201108 03:33:24.197"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>//input[@id="email"]</arg>
+</arguments>
+<assign>
+<var>${Status}</var>
+</assign>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//input[@id="email"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:51.641" endtime="20201108 00:11:51.652"></status>
+<status status="PASS" starttime="20201108 03:33:24.198" endtime="20201108 03:33:24.209"></status>
+</kw>
+<msg timestamp="20201108 03:33:24.209" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20201108 03:33:24.198" endtime="20201108 03:33:24.209"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Status} is False</arg>
+<arg>Logger</arg>
+<arg>ERROR</arg>
+<arg>Pagina nao encontrada.</arg>
+</arguments>
+<status status="PASS" starttime="20201108 03:33:24.209" endtime="20201108 03:33:24.209"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -56,8 +127,8 @@
 <arg>//input[@id="email"]</arg>
 <arg>${usuario}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:51.652" level="INFO">Typing text 'lucasperoti@gmail.com' into text field '//input[@id="email"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:51.652" endtime="20201108 00:11:51.752"></status>
+<msg timestamp="20201108 03:33:24.209" level="INFO">Typing text 'lucasperoti@gmail.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:24.209" endtime="20201108 03:33:24.310"></status>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -65,20 +136,20 @@
 <arg>//input[@id="password"]</arg>
 <arg>${senha}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:51.752" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
-<msg timestamp="20201108 00:11:51.788" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20201108 00:11:51.835" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20201108 00:11:51.752" endtime="20201108 00:11:51.835"></status>
+<msg timestamp="20201108 03:33:24.310" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<msg timestamp="20201108 03:33:24.344" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201108 03:33:24.390" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20201108 03:33:24.310" endtime="20201108 03:33:24.390"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@type="submit"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:51.836" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:51.835" endtime="20201108 00:11:51.891"></status>
+<msg timestamp="20201108 03:33:24.391" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:24.391" endtime="20201108 03:33:24.446"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:51.641" endtime="20201108 00:11:51.891"></status>
+<status status="PASS" starttime="20201108 03:33:24.196" endtime="20201108 03:33:24.446"></status>
 </kw>
 <kw name="Navegate To Generate Key Page">
 <doc>Navega ate a pagina de geraçao da API Key.</doc>
@@ -87,28 +158,28 @@
 <arguments>
 <arg>//button[@data-toggle="dropdown"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:51.892" endtime="20201108 00:11:52.930"></status>
+<status status="PASS" starttime="20201108 03:33:24.447" endtime="20201108 03:33:25.281"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@data-toggle="dropdown"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:52.931" level="INFO">Clicking element '//button[@data-toggle="dropdown"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:52.930" endtime="20201108 00:11:52.963"></status>
+<msg timestamp="20201108 03:33:25.281" level="INFO">Clicking element '//button[@data-toggle="dropdown"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.281" endtime="20201108 03:33:25.314"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:52.963" level="INFO">Clicking element '//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:52.963" endtime="20201108 00:11:53.015"></status>
+<msg timestamp="20201108 03:33:25.315" level="INFO">Clicking element '//a[@data-reactid=".0.2.0.0.0.0.2.0.0.1.0.0"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.314" endtime="20201108 03:33:25.364"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:51.891" endtime="20201108 00:11:53.015"></status>
+<status status="PASS" starttime="20201108 03:33:24.447" endtime="20201108 03:33:25.364"></status>
 </kw>
 <kw name="Generate Key">
-<doc>Gera a APO Key.</doc>
+<doc>Gera a API KEY.</doc>
 <arguments>
 <arg>${nomeKey}</arg>
 <arg>${descricao}</arg>
@@ -118,22 +189,22 @@
 <arguments>
 <arg>//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:53.016" endtime="20201108 00:11:53.027"></status>
+<status status="PASS" starttime="20201108 03:33:25.365" endtime="20201108 03:33:25.376"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:53.027" level="INFO">Clicking element '//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:53.027" endtime="20201108 00:11:53.080"></status>
+<msg timestamp="20201108 03:33:25.378" level="INFO">Clicking element '//span[@data-reactid=".0.2.0.1.1.0.0.1.1.0.1"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.376" endtime="20201108 03:33:25.434"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//textarea[@id="description"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:53.080" endtime="20201108 00:11:53.090"></status>
+<status status="PASS" starttime="20201108 03:33:25.434" endtime="20201108 03:33:25.445"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -141,8 +212,8 @@
 <arg>//input[@id="name"]</arg>
 <arg>${nomeKey}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:53.090" level="INFO">Typing text 'testePrime' into text field '//input[@id="name"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:53.090" endtime="20201108 00:11:53.170"></status>
+<msg timestamp="20201108 03:33:25.446" level="INFO">Typing text 'testePrime' into text field '//input[@id="name"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.445" endtime="20201108 03:33:25.530"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -150,8 +221,8 @@
 <arg>//textarea[@id="description"]</arg>
 <arg>${descricao}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:53.171" level="INFO">Typing text 'description' into text field '//textarea[@id="description"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:53.170" endtime="20201108 00:11:53.252"></status>
+<msg timestamp="20201108 03:33:25.531" level="INFO">Typing text 'description' into text field '//textarea[@id="description"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.530" endtime="20201108 03:33:25.612"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -159,42 +230,42 @@
 <arg>//input[@id="range-0"]</arg>
 <arg>${ip}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:53.253" level="INFO">Typing text '201.13.103.203' into text field '//input[@id="range-0"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:53.253" endtime="20201108 00:11:53.340"></status>
+<msg timestamp="20201108 03:33:25.613" level="INFO">Typing text '201.13.103.203' into text field '//input[@id="range-0"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.612" endtime="20201108 03:33:25.700"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//button[@type="submit"]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:53.341" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20201108 00:11:53.341" endtime="20201108 00:11:53.391"></status>
+<msg timestamp="20201108 03:33:25.700" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20201108 03:33:25.700" endtime="20201108 03:33:25.751"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:53.016" endtime="20201108 00:11:53.391"></status>
+<status status="PASS" starttime="20201108 03:33:25.364" endtime="20201108 03:33:25.751"></status>
 </kw>
 <kw name="Get API KEY">
-<doc>Obter a api key gerada.</doc>
+<doc>Obter a API KEY gerada.</doc>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//span[@class="dev-site-icon-key dev-site-icon"][1]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:53.392" endtime="20201108 00:11:54.228"></status>
+<status status="PASS" starttime="20201108 03:33:25.752" endtime="20201108 03:33:26.790"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//span[@class="dev-site-icon-key dev-site-icon"][1]</arg>
 </arguments>
-<msg timestamp="20201108 00:11:54.229" level="INFO">Clicking element '//span[@class="dev-site-icon-key dev-site-icon"][1]'.</msg>
-<status status="PASS" starttime="20201108 00:11:54.228" endtime="20201108 00:11:54.356"></status>
+<msg timestamp="20201108 03:33:26.790" level="INFO">Clicking element '//span[@class="dev-site-icon-key dev-site-icon"][1]'.</msg>
+<status status="PASS" starttime="20201108 03:33:26.790" endtime="20201108 03:33:26.847"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>//samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:54.356" endtime="20201108 00:11:54.365"></status>
+<status status="PASS" starttime="20201108 03:33:26.847" endtime="20201108 03:33:26.857"></status>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <doc>Returns the text value of the element identified by ``locator``.</doc>
@@ -204,49 +275,36 @@
 <assign>
 <var>${Key}</var>
 </assign>
-<msg timestamp="20201108 00:11:54.380" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjNjMxMzU1LTE3YTQtNDBjNi1iZWY4LTU...</msg>
-<status status="PASS" starttime="20201108 00:11:54.365" endtime="20201108 00:11:54.380"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${Key}</arg>
-</arguments>
-<status status="PASS" starttime="20201108 00:11:54.380" endtime="20201108 00:11:54.381"></status>
+<msg timestamp="20201108 03:33:26.872" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIzNGExYTIxLTVkYjctNGI2OC1hNjFlLTI...</msg>
+<status status="PASS" starttime="20201108 03:33:26.857" endtime="20201108 03:33:26.872"></status>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${Key}</arg>
 </arguments>
-<msg timestamp="20201108 00:11:54.382" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjBjNjMxMzU1LTE3YTQtNDBjNi1iZWY4LTU...</msg>
-<status status="PASS" starttime="20201108 00:11:54.381" endtime="20201108 00:11:54.382"></status>
+<msg timestamp="20201108 03:33:26.873" level="INFO">${Key} = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIzNGExYTIxLTVkYjctNGI2OC1hNjFlLTI...</msg>
+<status status="PASS" starttime="20201108 03:33:26.873" endtime="20201108 03:33:26.873"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:53.391" endtime="20201108 00:11:54.382"></status>
+<status status="PASS" starttime="20201108 03:33:25.752" endtime="20201108 03:33:26.873"></status>
 </kw>
-<kw name="teste">
+<kw name="Generate CSV FILE">
+<doc>Escreve no Arquivo csv o resultado da lista obtida atraves da api.</doc>
 <arguments>
 <arg>${Key}</arg>
 </arguments>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${Key}</arg>
-</arguments>
-<status status="PASS" starttime="20201108 00:11:54.382" endtime="20201108 00:11:54.394"></status>
-</kw>
 <kw name="Generate Csv" library="ApiConsumer">
 <arguments>
 <arg>${Key}</arg>
 </arguments>
-<status status="PASS" starttime="20201108 00:11:54.394" endtime="20201108 00:11:58.522"></status>
+<status status="PASS" starttime="20201108 03:33:26.874" endtime="20201108 03:33:31.059"></status>
 </kw>
-<status status="PASS" starttime="20201108 00:11:54.382" endtime="20201108 00:11:58.522"></status>
+<status status="PASS" starttime="20201108 03:33:26.874" endtime="20201108 03:33:31.060"></status>
 </kw>
-<doc>Fazer o login na pagina e gerar a key para a api.</doc>
-<status status="PASS" starttime="20201108 00:11:41.735" endtime="20201108 00:11:58.523" critical="yes"></status>
+<doc>Faz o login na pagina e gera o arquivo csv.</doc>
+<status status="PASS" starttime="20201108 03:33:15.906" endtime="20201108 03:33:31.060" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20201108 00:11:41.533" endtime="20201108 00:11:58.524"></status>
+<status status="PASS" starttime="20201108 03:33:15.702" endtime="20201108 03:33:31.061"></status>
 </suite>
 <statistics>
 <total>
