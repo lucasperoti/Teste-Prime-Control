@@ -53,7 +53,7 @@ def get_clan_members(key):
 def generate_csv(key):
     clan_members = get_clan_members(key)
 
-    with open('membros.csv', 'w', newline='', encoding="utf-8") as csvfile:
+    with open('results/membros.csv', 'w', newline='', encoding="utf-8") as csvfile:
 
         fieldnames = ['nome', 'level', 'Troféus', 'papel']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -67,8 +67,3 @@ def generate_csv(key):
                 'papel'   : item["role"]            
             })
     return "csv gerado com sucesso"
-
-
-#if __name__ == "__main__" :
-#   generate_csv("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImUzYjRiOWFkLTllNzEtNDkwOC1iNzg5LTIxNmM5NGFlZGE2NyIsImlhdCI6MTYwNDc4NTg5OSwic3ViIjoiZGV2ZWxvcGVyLzAyYjdkOGUzLWM1MTItYzBiNS0zMWM1LWZjMmRiODVmOWY5OCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyMDEuMTMuMTAzLjIwMyJdLCJ0eXBlIjoiY2xpZW50In1dfQ.dJDAmG2W6yrrp-iSPVLy4UDzfnp6vH5ZxO_dE7J1vGGfCtZehqSZWq9AQRFHtUIaaiPHR3C9XPcO5Ar_SlJ4YA")
-   

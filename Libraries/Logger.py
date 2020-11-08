@@ -6,7 +6,7 @@ def logger (levelname, message):
     logger = logging.getLogger('Teste Clash Royale')
     logger.setLevel(logging.INFO)
 
-    file_handler = logging.FileHandler('log ' + str(date.today()), mode='a')
+    file_handler = logging.FileHandler('logs/log ' + str(date.today()), mode='a')
     console_handler = logging.StreamHandler()
 
     formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
@@ -32,5 +32,3 @@ def logger (levelname, message):
         console_handler.setLevel(logging.ERROR)
         logger.error(message)
 
-if __name__ == "__main__" :
-    logger("error", "teste")        
