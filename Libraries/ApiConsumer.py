@@ -72,6 +72,7 @@ def generate_csv(key):
                 'Troféus' : item["trophies"],
                 'papel'   : item["role"]            
             })
+            
     return "csv gerado com sucesso"
 
 #Metodo para obter o ip da maquina
