@@ -16,7 +16,7 @@ Generate API KEY
     Navegate To Generate Key Page
     Generate Key    ${nomeKey}      ${descricao}   
     Get API KEY
-    teste   ${Key}
+    Generate CSV   ${Key}
 
 
 *** Keywords ***
@@ -49,17 +49,13 @@ Generate Key
     Input Text     //textarea[@id="description"]  ${descricao}
     Input Text     //input[@id="range-0"]  ${ip}
     Click Button   //button[@type="submit"]
-    
 Get API KEY
     [Documentation]     Obter a api key gerada.
     Wait Until Page Contains Element  //span[@class="dev-site-icon-key dev-site-icon"][1]
     Click Element       //span[@class="dev-site-icon-key dev-site-icon"][1]  
     Wait Until Page Contains Element  //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]  
     ${Key}  Get Text    //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"] 
-    Log To Console          ${Key}
     Set Global Variable     ${Key}  
-
-teste
+Generate CSV
     [Arguments]         ${Key}
-    Log To Console      ${Key}
-    Generate Csv        ${Key}
+    Generate CSV        ${Key}
