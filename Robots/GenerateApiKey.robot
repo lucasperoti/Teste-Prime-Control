@@ -6,7 +6,7 @@ Library     ../Libraries/Logger.py
 
 *** Variables ***
 ${BROWSER}      Chrome
-${ip}       201.93.197.69    
+${ip}           
 ${Key}  
 ${Status}
 
@@ -68,6 +68,7 @@ Generate Key
     Wait Until Page Contains Element  //textarea[@id="description"]
     Input Text     //input[@id="name"]  ${nomeKey}
     Input Text     //textarea[@id="description"]  ${descricao}
+    ${ip}   get_ip
     Input Text     //input[@id="range-0"]  ${ip}
     Click Button   //button[@type="submit"]
     Logger  INFO    API KEY gerada com sucesso
@@ -96,4 +97,5 @@ Terminate
     Logger  INFO    Fechando BROWSER
     Close Browser       
 
+# para executar o processo utilizar seguinte comando : pipenv run robot -V .\Libraries\config.py Robots\GenerateApiKey.robot\
 

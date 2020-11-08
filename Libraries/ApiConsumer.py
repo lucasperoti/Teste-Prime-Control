@@ -6,7 +6,6 @@ base_url = "https://api.clashroyale.com/v1/"
 endpoint = ""
 
 #Utiliza a API para obter o countryID do Brazil
-
 def get_CountryID (key):
     endpoint = "locations"
     r = urllib.request.Request(
@@ -21,9 +20,11 @@ def get_CountryID (key):
             id = (item ["id"])
     return id
 
+#Metodo para obter o clan tag utilizando o nome e countryID obtido no metado de get_coutryID
 def get_clan_information(key):
     location_id = get_CountryID(key)
-    endpoint = "clans?name=The%20resistance&locationId=" + str(location_id)
+    name = "The%20resistance&locationId"
+    endpoint = "clans?name=" + name + "=" + str(location_id)
     r = urllib.request.Request(
         base_url+endpoint, None,{ 
             "Authorization" : "Bearer %s" % key
@@ -38,6 +39,7 @@ def get_clan_information(key):
         else:
             return "nao encontrado"
 
+#Metodo para obter a lista de membros do clan buscado pelo meto get clan members
 def get_clan_members(key):
     clan_tag = get_clan_information(key)
     endpoint = "clans/" + clan_tag.replace("#","%23") + "/members"
@@ -50,6 +52,7 @@ def get_clan_members(key):
     data = json.loads(response)
     return data
 
+#Metodo para gerar o arquivo csv com base na lista obtida utilizando o metodo get_clan_members
 def generate_csv(key):
     clan_members = get_clan_members(key)
 
@@ -67,3 +70,10 @@ def generate_csv(key):
                 'papel'   : item["role"]            
             })
     return "csv gerado com sucesso"
+
+#Metodo para obter o ip da maquina
+def get_ip():
+    r = urllib.request.Request("http://meuip.com/api/meuip.php")
+    response = urllib.request.urlopen(r).read().decode("utf-8")
+    return response
+

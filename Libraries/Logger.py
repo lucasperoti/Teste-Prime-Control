@@ -1,6 +1,9 @@
 import logging
 from datetime import date
 
+#Metado para executar os logs do processo
+#levelname recebe qual tipo de log deve ser feito 
+#message recebe a mensagem que sera escrita no log
 def logger (levelname, message):
 
     logger = logging.getLogger('Teste Clash Royale')
@@ -17,6 +20,8 @@ def logger (levelname, message):
     console_handler.setFormatter(formatter)
     file_handler.setFormatter(formatter)
     
+    #Seleciona qual tipo de log sera utilizado
+
     if str(levelname).upper() == "INFO" :
         file_handler.setLevel(logging.INFO)
         console_handler.setLevel(logging.INFO)
