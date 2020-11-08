@@ -1,5 +1,6 @@
 import logging
 from datetime import date
+import os
 
 #Metado para executar os logs do processo
 #levelname recebe qual tipo de log deve ser feito 
@@ -9,7 +10,11 @@ def logger (levelname, message):
     logger = logging.getLogger('Teste Clash Royale')
     logger.setLevel(logging.INFO)
 
-    file_handler = logging.FileHandler('logs/log ' + str(date.today()), mode='a')
+    if not os.path.exists("Logs/"):
+        os.mkdir("Logs/")
+
+
+    file_handler = logging.FileHandler('Logs/log ' + str(date.today()), mode='a')
     console_handler = logging.StreamHandler()
 
     formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')

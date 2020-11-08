@@ -1,6 +1,7 @@
 import urllib.request
 import json
 import csv
+import os
 
 base_url = "https://api.clashroyale.com/v1/"
 endpoint = ""
@@ -55,8 +56,10 @@ def get_clan_members(key):
 #Metodo para gerar o arquivo csv com base na lista obtida utilizando o metodo get_clan_members
 def generate_csv(key):
     clan_members = get_clan_members(key)
+    if not os.path.exists("Results/"):
+        os.mkdir("Results/")
 
-    with open('results/membros.csv', 'w', newline='', encoding="utf-8") as csvfile:
+    with open('Results/membros.csv', 'w', newline='', encoding="utf-8") as csvfile:
 
         fieldnames = ['nome', 'level', 'Troféus', 'papel']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

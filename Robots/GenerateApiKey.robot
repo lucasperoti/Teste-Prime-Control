@@ -97,5 +97,5 @@ Terminate
     Logger  INFO    Fechando BROWSER
     Close Browser       
 
-# para executar o processo utilizar seguinte comando : pipenv run robot -V .\Libraries\config.py Robots\GenerateApiKey.robot\
+# para executar o processo utilizar seguinte comando : pipenv run robot -V .\Libraries\config.py Robots\GenerateApiKey.robot
 
