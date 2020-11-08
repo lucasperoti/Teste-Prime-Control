@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
-
-
+Library     ../Libraries/ApiConsumer.py
+                
 
 *** Variables ***
 ${BROWSER}      Chrome
@@ -16,6 +16,7 @@ Generate API KEY
     Navegate To Generate Key Page
     Generate Key    ${nomeKey}      ${descricao}   
     Get API KEY
+    teste   ${Key}
 
 
 *** Keywords ***
@@ -55,4 +56,10 @@ Get API KEY
     Click Element       //span[@class="dev-site-icon-key dev-site-icon"][1]  
     Wait Until Page Contains Element  //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"]  
     ${Key}  Get Text    //samp[@data-reactid=".0.2.0.1.0.0.0.1.0.0.1.0"] 
+    Log To Console          ${Key}
+    Set Global Variable     ${Key}  
 
+teste
+    [Arguments]         ${Key}
+    Log To Console      ${Key}
+    Generate Csv        ${Key}
